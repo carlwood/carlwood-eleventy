@@ -1,6 +1,6 @@
 :root {
-  --red: #C5004A;
-  --darkred: #7F0036;
+  --red: #000;
+  --darkred: #000;
   --lightgray: #e0e0e0;
   --gray: #C0C0C0;
   --darkgray: #333;
@@ -34,9 +34,7 @@ p,
 a[href] {
   color: var(--blue);
 }
-a[href]:visited {
-  color: var(--navy);
-}
+
 main {
   padding: 1rem;
 }
@@ -149,16 +147,6 @@ pre {
   list-style: none;
   padding: 0;
 }
-.postlist-item {
-  counter-increment: start-from -1;
-}
-.postlist-item:before {
-  display: inline-block;
-  pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
-  line-height: 100%;
-  text-align: right;
-}
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
@@ -173,10 +161,6 @@ pre {
 }
 .postlist-item-active .postlist-link {
   font-weight: bold;
-}
-.tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
 }
 
 
@@ -223,4 +207,30 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+h1, h2, h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.postlist-link {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.home a {
+  font-weight: 800;
+  background: #0357ad;
+  color: #fff;
+  padding: 10px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  font-size: 20px;
 }
